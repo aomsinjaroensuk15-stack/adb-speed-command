@@ -1,0 +1,9 @@
+# OPPO / ColorOS (safe to disable)
+com.coloros.phonemanager
+com.coloros.assistantscreen
+com.heytap.browser
+com.heytap.themestore
+com.heytap.cloud
+com.nearme.gamecenter
+com.facebook.system
+com.facebook.appmanager
