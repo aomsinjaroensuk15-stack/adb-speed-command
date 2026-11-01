@@ -1,4 +1,4 @@
-adb-command-guides ⚡
+adb-speed-command ⚡
 
 Make your Android phone feel faster — no root, no PC.
 Just [Shizuku](https://shizuku.rikka.app) + [aShell](https://github.com/saitamasahil/aShell).
@@ -9,29 +9,37 @@ Requirements
 3. [aShell](https://github.com/saitamasahil/aShell) installed, Shizuku permission granted
 
 Quick start (scripts)
-Copy this repo to your phone, then in aShell:
+
+Clone (in Termux — do NOT clone directly into /sdcard, git fails there):
 
 ```sh
-# run EVERYTHING at once (animations + ram + auto-detected debloat)
-sh scripts/speed.sh all
-
-# or pick one
-sh scripts/speed.sh anim      # faster animations (default 0.5x)
-sh scripts/speed.sh anim off  # animations fully off
-sh scripts/speed.sh anim reset
-sh scripts/speed.sh ram       # free RAM
-sh scripts/speed.sh debloat   # disable bloatware (auto-detects brand)
-sh scripts/speed.sh undo      # restore all defaults
+git clone https://github.com/aomsinjaroensuk15-stack/adb-speed-command.git ~/adb-speed-command
+cp -r ~/adb-speed-command /sdcard/Download/
 ```
+
+Then in aShell (with Shizuku active), always use the full path:
+
+```sh
+sh /sdcard/Download/adb-speed-command/scripts/speed.sh all
+```
+
+Commands
+- `sh /sdcard/Download/adb-speed-command/scripts/speed.sh all` — animations + ram + debloat in one go
+- `sh /sdcard/Download/adb-speed-command/scripts/speed.sh anim` — faster animations (0.5x)
+- `sh /sdcard/Download/adb-speed-command/scripts/speed.sh anim off` — animations fully off
+- `sh /sdcard/Download/adb-speed-command/scripts/speed.sh anim reset` — back to default
+- `sh /sdcard/Download/adb-speed-command/scripts/speed.sh ram` — free RAM
+- `sh /sdcard/Download/adb-speed-command/scripts/speed.sh debloat` — disable bloatware (auto-detects your phone brand)
+- `sh /sdcard/Download/adb-speed-command/scripts/speed.sh undo` — restore all defaults
 
 Custom debloat list:
 
 ```sh
-sh scripts/speed.sh debloat /sdcard/Download/my-list.txt
+sh /sdcard/Download/adb-speed-command/scripts/speed.sh debloat /sdcard/Download/my-list.txt
 ```
 
 Quick copy-paste (no download needed)
-Paste straight into aShell — fastest animations possible:
+Paste straight into aShell:
 
 ```sh
 settings put global window_animation_scale 0.5
