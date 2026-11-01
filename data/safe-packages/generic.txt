@@ -1,0 +1,9 @@
+# Generic bloatware — common on many phones (one package per line)
+com.facebook.katana
+com.facebook.system
+com.facebook.appmanager
+com.google.android.printservice.recommendation
+com.android.printspooler
+com.google.android.apps.tachyon
+com.google.android.apps.walletnfcrel
+com.google.android.apps.wellbeing
