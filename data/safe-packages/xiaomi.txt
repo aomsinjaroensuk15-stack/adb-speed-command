@@ -1,0 +1,11 @@
+# Xiaomi / MIUI / HyperOS (safe to disable)
+com.miui.analytics
+com.miui.msa.global
+com.miui.yellowpage
+com.miui.player
+com.miui.notes
+com.xiaomi.joyose
+com.xiaomi.glgm
+com.miui.cleanmaster
+com.facebook.system
+com.facebook.appmanager
