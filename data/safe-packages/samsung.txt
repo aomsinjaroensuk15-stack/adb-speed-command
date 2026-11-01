@@ -1,0 +1,11 @@
+# Samsung-specific (safe to disable)
+com.samsung.android.bixby.agent
+com.samsung.android.bixby.service
+com.samsung.android.app.spage
+com.samsung.android.calendar
+com.samsung.android.email.provider
+com.sec.android.app.sbrowser
+com.samsung.android.game.gamehome
+com.facebook.katana
+com.facebook.system
+com.facebook.appmanager
