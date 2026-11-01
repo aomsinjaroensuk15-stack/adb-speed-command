@@ -1,0 +1,22 @@
+name: check-scripts
+on:
+  push:
+    paths: ["scripts/**", ".github/workflows/check.yml"]
+  pull_request:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Syntax-check all shell scripts
+        run: |
+          for f in scripts/speed.sh scripts/lib/*.sh; do
+            echo "Checking $f"
+            sh -n "$f"
+          done
+      - name: Check package list formatting
+        run: |
+          for f in data/safe-packages/*.txt; do
+            grep -vE '^\s*(#|$|[a-zA-Z0-9_.]+)$' "$f" && exit 1 || true
+          done
